@@ -1,0 +1,10 @@
+{
+    "last_updated": "Fri, 08 Oct 2021 14:24:05 GMT",
+    "routes": [
+        {
+            "file_path": "views/address/address_view.dart",
+            "route_name": "addressViewRoute",
+            "view_name": "AddressView"
+        }
+    ]
+}
