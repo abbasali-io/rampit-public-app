@@ -15,6 +15,7 @@ dependencies:
     responsive_builder: ^0.2.0+2
     equatable: ^1.2.4
     ############
+    ##gradient_text: ^1.0.2
     liquid_ui: ^1.0.0+9
     font_awesome_flutter: ^9.1.0
     google_fonts: ^2.1.0
@@ -27,6 +28,7 @@ flutter:
     uses-material-design: true
     assets:
         - assets/images/
+        - assets/icons/
 
 
   # To add assets to your application, add an assets section, like this:

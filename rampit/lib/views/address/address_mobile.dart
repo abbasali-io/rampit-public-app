@@ -163,12 +163,14 @@ class _AddressMobile extends StatelessWidget {
                                 width: 1.5,
                               ),
                             ),
+                            label: Text(
+                              'Post Code',
+                                style:TextStyle(
+                                color: MyStyles.themeData().primaryColorLight,
+                              ),
+                            ),
                             hoverColor: MyStyles.themeData().highlightColor,
                             focusColor: MyStyles.themeData().highlightColor,
-                            hintText: 'Post Code',
-                            hintStyle: TextStyle(
-                              color: MyStyles.themeData().primaryColorLight,
-                            ),
                             enabledBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(5),
                               borderSide: BorderSide(
@@ -237,9 +239,11 @@ class _AddressMobile extends StatelessWidget {
                             ),
                             hoverColor: MyStyles.themeData().highlightColor,
                             focusColor: MyStyles.themeData().highlightColor,
-                            hintText: 'Unit Number,House Number,Street Name',
-                            hintStyle: TextStyle(
-                              color: MyStyles.themeData().primaryColorLight,
+                            label: Text(
+                              'Unit Number,House Number,Street Name',
+                                style:TextStyle(
+                                color: MyStyles.themeData().primaryColorLight,
+                              ),
                             ),
                             enabledBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(5),
