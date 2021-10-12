@@ -1,11 +1,31 @@
-import 'package:logger/logger.dart';
+import 'package:flutter/material.dart';
+import 'package:rampit/core/locator.dart';
+import 'package:rampit/core/router_constants.dart';
 import 'package:stacked/stacked.dart';
-import 'package:rampit/core/logger.dart';
+import 'package:stacked_services/stacked_services.dart';
 
 class HomeViewModel extends BaseViewModel {
-  Logger log;
+  NavigationService nav = locator<NavigationService>();
 
   HomeViewModel() {
-    this.log = getLogger(this.runtimeType.toString());
+  }
+
+  navigateToPage({@required int pageIndex}) {
+    switch (pageIndex) {
+      case 0:
+        {
+          nav.navigateTo(homeViewRoute);
+          break;
+        }
+      case 1:
+        {
+          nav.navigateTo(categoryViewRoute);
+          break;
+        }
+      default:
+        {
+          nav.navigateTo(homeViewRoute);
+        }
+    }
   }
 }

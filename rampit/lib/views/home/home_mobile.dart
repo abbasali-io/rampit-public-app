@@ -22,43 +22,65 @@ class _HomeMobile extends StatelessWidget {
       designSize: Size(100, 100),
     );
     return Scaffold(
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButtonLocation:
+          FloatingActionButtonLocation.miniCenterDocked,
       floatingActionButton: FloatingActionButton(
         elevation: 10,
         backgroundColor: MyStyles.themeData().backgroundColor,
         child: const FaIcon(FontAwesomeIcons.shoppingCart, color: Colors.black),
         onPressed: () {},
       ),
-      bottomNavigationBar: BottomAppBar(
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: 0,
+        unselectedItemColor: MyStyles.themeData().highlightColor,
+        selectedItemColor: MyStyles.themeData().primaryColor,
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
+        type: BottomNavigationBarType.fixed,
         elevation: 40,
-        color: MyStyles.themeData().backgroundColor,
-        shape: CircularNotchedRectangle(),
-        notchMargin: 10.0,
-        child: new Row(
-          mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[
-            IconButton(
-              icon: FaIcon(FontAwesomeIcons.home),
-              onPressed: () {},
-            ),
-            IconButton(
-              icon: FaIcon(FontAwesomeIcons.shoppingBag),
-              onPressed: () {},
-            ),
-            SizedBox(
-              width: 10.w,
-            ),
-            IconButton(
-              icon: FaIcon(FontAwesomeIcons.search),
-              onPressed: () {},
-            ),
-            IconButton(
-              icon: FaIcon(FontAwesomeIcons.userAlt),
-              onPressed: () {},
-            ),
-          ],
-        ),
+        onTap: (index) {
+          this.viewModel.navigateToPage(pageIndex: index);
+        },
+        items: [
+          BottomNavigationBarItem(
+              icon: FaIcon(FontAwesomeIcons.home), label: 'Home'),
+          BottomNavigationBarItem(
+              icon: FaIcon(FontAwesomeIcons.shoppingBag), label: 'Category'),
+          BottomNavigationBarItem(
+              icon: FaIcon(FontAwesomeIcons.search), label: 'Search'),
+          BottomNavigationBarItem(
+              icon: FaIcon(FontAwesomeIcons.userAlt), label: 'User'),
+        ],
+        backgroundColor: MyStyles.themeData().backgroundColor,
+        // shape: CircularNotchedRectangle(),
+        // notchMargin: 10.0,
+        // child: new Row(
+        //   mainAxisSize: MainAxisSize.max,
+        //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        //   children: <Widget>[
+        //     IconButton(
+        //       icon: FaIcon(FontAwesomeIcons.home),
+        //       onPressed: () {
+        //         this.viewModel.navigateToPage(pageName: 'Home');
+        //       },
+        //     ),
+        //     IconButton(
+        //       icon: FaIcon(FontAwesomeIcons.shoppingBag),
+        //       onPressed: () {},
+        //     ),
+        //     SizedBox(
+        //       width: 10.w,
+        //     ),
+        //     IconButton(
+        //       icon: FaIcon(FontAwesomeIcons.search),
+        //       onPressed: () {},
+        //     ),
+        //     IconButton(
+        //       icon: FaIcon(FontAwesomeIcons.userAlt),
+        //       onPressed: () {},
+        //     ),
+        //   ],
+        // ),
       ),
       body: SafeArea(
         child: SingleChildScrollView(
@@ -184,8 +206,8 @@ class _HomeMobile extends StatelessWidget {
                                   child: Text(
                                     'Opening times',
                                     style: TextStyle(
-                                        color:
-                                            MyStyles.themeData().backgroundColor,
+                                        color: MyStyles.themeData()
+                                            .backgroundColor,
                                         fontSize: 5.sp),
                                   ),
                                 ),
@@ -201,13 +223,12 @@ class _HomeMobile extends StatelessWidget {
                                         Color.fromRGBO(214, 242, 255, 1)
                                       ],
                                     ).createShader(rect),
-        
                                     child: Align(
                                       alignment: Alignment.centerLeft,
                                       child: Text(
                                         '8am - 10pm',
                                         style: TextStyle(
-                                          fontWeight: FontWeight.bold,
+                                            fontWeight: FontWeight.bold,
                                             color: MyStyles.themeData()
                                                 .backgroundColor,
                                             fontSize: 7.sp),
@@ -219,8 +240,8 @@ class _HomeMobile extends StatelessWidget {
                                   child: Text(
                                     'Every Day',
                                     style: TextStyle(
-                                        color:
-                                            MyStyles.themeData().backgroundColor,
+                                        color: MyStyles.themeData()
+                                            .backgroundColor,
                                         fontSize: 5.sp),
                                   ),
                                 ),
@@ -237,14 +258,11 @@ class _HomeMobile extends StatelessWidget {
                   height: 10.h,
                   child: Align(
                     alignment: Alignment.centerLeft,
-                    child: Text(
-                      'Papular',
-                      style: TextStyle(
-                        color: MyStyles.themeData().highlightColor,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 5.sp
-                      )
-                    ),
+                    child: Text('Papular',
+                        style: TextStyle(
+                            color: MyStyles.themeData().highlightColor,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 5.sp)),
                   ),
                 ),
                 Container(
@@ -253,10 +271,30 @@ class _HomeMobile extends StatelessWidget {
                   child: ListView(
                     scrollDirection: Axis.horizontal,
                     children: [
-                      ProductContainerWidget(heading1: 'KARMA DRINKS',heading2: 'ORGANIC ORANGE',imagePath: 'assets/images/karma-drinks.png',text: 'RM 8.00 each',),
-                      ProductContainerWidget(heading1: 'PROPER CRIPS CIDER',heading2: 'VINEGAR 140G',imagePath: 'assets/images/crisp-cider.png',text: 'RM 10.00 each',),
-                      ProductContainerWidget(heading1: 'KARMA DRINKS',heading2: 'ORGANIC ORANGE',imagePath: 'assets/images/karma-drinks.png',text: 'RM 8.00 each',),
-                      ProductContainerWidget(heading1: 'PROPER CRIPS CIDER',heading2: 'VINEGAR 140G',imagePath: 'assets/images/crisp-cider.png',text: 'RM 10.00 each',),
+                      ProductContainerWidget(
+                        heading1: 'KARMA DRINKS',
+                        heading2: 'ORGANIC ORANGE',
+                        imagePath: 'assets/images/karma-drinks.png',
+                        text: 'RM 8.00 each',
+                      ),
+                      ProductContainerWidget(
+                        heading1: 'PROPER CRIPS CIDER',
+                        heading2: 'VINEGAR 140G',
+                        imagePath: 'assets/images/crisp-cider.png',
+                        text: 'RM 10.00 each',
+                      ),
+                      ProductContainerWidget(
+                        heading1: 'KARMA DRINKS',
+                        heading2: 'ORGANIC ORANGE',
+                        imagePath: 'assets/images/karma-drinks.png',
+                        text: 'RM 8.00 each',
+                      ),
+                      ProductContainerWidget(
+                        heading1: 'PROPER CRIPS CIDER',
+                        heading2: 'VINEGAR 140G',
+                        imagePath: 'assets/images/crisp-cider.png',
+                        text: 'RM 10.00 each',
+                      ),
                     ],
                   ),
                 )
