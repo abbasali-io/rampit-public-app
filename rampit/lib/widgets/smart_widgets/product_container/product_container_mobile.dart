@@ -5,8 +5,10 @@ class _ProductContainerMobile extends StatelessWidget {
   final String heading1;
   final String heading2;
   final String text;
+  final String description;
   final ProductContainerViewModel viewModel;
   _ProductContainerMobile({
+    @required this.description,
     @required this.viewModel,
     @required this.imagePath,
     @required this.heading1,
@@ -25,114 +27,125 @@ class _ProductContainerMobile extends StatelessWidget {
         alignment: Alignment.topLeft,
         child: Container(
           width: 50.w,
-          child: Column(
-            children: [
-              Align(
-                alignment: Alignment.topLeft,
-                child: Container(
-                  width: 40.w,
-                  height: 42.5.h,
-                  decoration: BoxDecoration(
-                      border: Border.all(style: BorderStyle.solid),
-                      borderRadius: BorderRadius.circular(5)),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Container(
-                        width: 40.w,
-                        height: 35.h,
-                        decoration: BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage(this.imagePath),
-                                fit: BoxFit.fill)),
-                      ),
-                      Container(
-                        width: 45.w,
-                        height: 7.h,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-                            IconButton(
-                                splashRadius: 5.sp,
-                                onPressed: () {
-                                  this.viewModel.productIncrement();
-                                },
-                                icon: FaIcon(
-                                  FontAwesomeIcons.plus,
-                                  size: 3.sp,
-                                )),
-                            viewModel.productCounter == 0
-                                ? Text('')
-                                : Container(
-                                    child: Center(
-                                      child: Padding(
-                                        padding: const EdgeInsets.fromLTRB(2,0,2,0),
-                                        child: Text(
-                                          viewModel.productCounter.toString(),
-                                          style: TextStyle(
-                                            fontSize: 6.sp,
+          child: InkWell(
+            onTap: () {
+              this.viewModel.goToProductViewPage(
+                  description: description,
+                  imagePath: imagePath,
+                  heading1: heading1 + heading2,
+                  heading2: text);
+            },
+            child: Column(
+              children: [
+                Align(
+                  alignment: Alignment.topLeft,
+                  child: Container(
+                    width: 40.w,
+                    height: 42.5.h,
+                    decoration: BoxDecoration(
+                        border: Border.all(style: BorderStyle.solid),
+                        borderRadius: BorderRadius.circular(5)),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Container(
+                          width: 40.w,
+                          height: 35.h,
+                          decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: AssetImage(this.imagePath),
+                                  fit: BoxFit.fill)),
+                        ),
+                        Container(
+                          width: 45.w,
+                          height: 7.h,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: [
+                              IconButton(
+                                  splashRadius: 5.sp,
+                                  onPressed: () {
+                                    this.viewModel.productIncrement();
+                                  },
+                                  icon: FaIcon(
+                                    FontAwesomeIcons.plus,
+                                    size: 3.sp,
+                                  )),
+                              viewModel.productCounter == 0
+                                  ? Text('')
+                                  : Container(
+                                      child: Center(
+                                        child: Padding(
+                                          padding: const EdgeInsets.fromLTRB(
+                                              2, 0, 2, 0),
+                                          child: Text(
+                                            viewModel.productCounter.toString(),
+                                            style: TextStyle(
+                                              fontSize: 6.sp,
+                                            ),
                                           ),
                                         ),
                                       ),
                                     ),
-                                  ),
-                            viewModel.productCounter == 0
-                                ? Text('')
-                                : IconButton(
-                                    splashRadius: 5.sp,
-                                    onPressed: () {
-                                      this.viewModel.productDecrement();
-                                    },
-                                    icon: FaIcon(
-                                      FontAwesomeIcons.minus,
-                                      size: 3.sp,
-                                    ))
-                          ],
-                        ),
-                      )
-                    ],
+                              viewModel.productCounter == 0
+                                  ? Text('')
+                                  : IconButton(
+                                      splashRadius: 5.sp,
+                                      onPressed: () {
+                                        this.viewModel.productDecrement();
+                                      },
+                                      icon: FaIcon(
+                                        FontAwesomeIcons.minus,
+                                        size: 3.sp,
+                                      ))
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                 ),
-              ),
-              Align(
-                alignment: Alignment.centerLeft,
-                child: Container(
-                    width: 40.w,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Container(
-                            child: Text(
-                          this.heading1,
-                          style: TextStyle(
-                              color: MyStyles.themeData().highlightColor,
-                              fontSize: 4.5.sp,
-                              fontWeight: FontWeight.bold),
-                        )),
-                        Container(
-                            child: Text(
-                          this.heading2,
-                          style: TextStyle(
-                              color: MyStyles.themeData().highlightColor,
-                              fontSize: 4.5.sp,
-                              fontWeight: FontWeight.bold),
-                        )),
-                        Container(
-                            height: 4.h,
-                            child: Align(
-                              alignment: Alignment.bottomLeft,
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Container(
+                      width: 40.w,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Container(
                               child: Text(
-                                this.text,
-                                style: TextStyle(
-                                  color: MyStyles.themeData().primaryColorLight,
-                                  fontSize: 4.sp,
+                            this.heading1,
+                            style: TextStyle(
+                                color: MyStyles.themeData().highlightColor,
+                                fontSize: 4.5.sp,
+                                fontWeight: FontWeight.bold),
+                          )),
+                          Container(
+                              child: Text(
+                            this.heading2,
+                            style: TextStyle(
+                                color: MyStyles.themeData().highlightColor,
+                                fontSize: 4.5.sp,
+                                fontWeight: FontWeight.bold),
+                          )),
+                          Container(
+                              height: 4.h,
+                              child: Align(
+                                alignment: Alignment.bottomLeft,
+                                child: Text(
+                                  this.text,
+                                  style: TextStyle(
+                                    color:
+                                        MyStyles.themeData().primaryColorLight,
+                                    fontSize: 4.sp,
+                                  ),
                                 ),
-                              ),
-                            ))
-                      ],
-                    )),
-              )
-            ],
+                              ))
+                        ],
+                      )),
+                )
+              ],
+            ),
           ),
         ));
   }

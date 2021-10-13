@@ -82,11 +82,18 @@ class _CategoryMobile extends StatelessWidget {
                           childAspectRatio: 0.49,
                         ),
                         itemBuilder: (BuildContext context, int index) {
-                          return ProductContainerWidget(
-                            heading1: 'KARMA DRINKS',
-                            heading2: 'ORGANIC ORANGE',
-                            imagePath: 'assets/images/karma-drinks.png',
-                            text: 'RM 8.00 each',
+                          return InkWell(
+                            splashColor: MyStyles.themeData().primaryColor,
+                            onTap: (){
+
+                            },
+                            child: ProductContainerWidget(
+                              description: 'Refreshing, revitalising and so scrumptious you could slurp em all back in one go, our latest range of do gooding juices taste as fruity as they make you feel.',
+                              heading1: 'KARMA DRINKS',
+                              heading2: 'ORGANIC ORANGE',
+                              imagePath: 'assets/images/karma-drinks.png',
+                              text: 'RM 8.00 each',
+                            ),
                           );
                         },
                       ),

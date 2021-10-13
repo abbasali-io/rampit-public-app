@@ -19,7 +19,9 @@ class ProductContainerWidget extends StatelessWidget {
   final String heading1;
   final String heading2;
   final String text;
+  final String description;
   ProductContainerWidget({
+    @required this.description,
     @required this.imagePath,
     @required this.heading1,
     @required this.heading2,
@@ -28,9 +30,16 @@ class ProductContainerWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ViewModelBuilder<ProductContainerViewModel>.reactive(
-      builder: (BuildContext context, ProductContainerViewModel viewModel, Widget _) {
+      builder: (BuildContext context, ProductContainerViewModel viewModel,
+          Widget _) {
         return ScreenTypeLayout(
-          mobile: _ProductContainerMobile(viewModel: viewModel,heading1:  this.heading1,heading2: this.heading2,imagePath: this.imagePath,text: this.text),
+          mobile: _ProductContainerMobile(
+              description: description,
+              viewModel: viewModel,
+              heading1: this.heading1,
+              heading2: this.heading2,
+              imagePath: this.imagePath,
+              text: this.text),
           desktop: _ProductContainerDesktop(),
           tablet: _ProductContainerTablet(),
         );

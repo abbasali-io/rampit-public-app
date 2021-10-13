@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 
 class CategoryViewModel extends BaseViewModel {
+
   List<String> _catTagList;
   List<String> get catTagList => this._catTagList;
   set catTagList(List<String> value) {

@@ -1,5 +1,6 @@
 import 'package:get_it/get_it.dart';
 import 'package:logger/logger.dart';
+import 'package:rampit/core/services/product.service.dart';
 import 'package:stacked_services/stacked_services.dart';
 
 import 'logger.dart';
@@ -15,5 +16,7 @@ class LocatorInjector {
     locator.registerLazySingleton(() => DialogService());
     log.d('Registering Snackbar Service');
     locator.registerLazySingleton(() => SnackbarService());
+    log.d('Register Product Service');
+    locator.registerLazySingleton(() => ProductService());
   }
 }

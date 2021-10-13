@@ -272,24 +272,28 @@ class _HomeMobile extends StatelessWidget {
                     scrollDirection: Axis.horizontal,
                     children: [
                       ProductContainerWidget(
+                        description: 'Refreshing, revitalising and so scrumptious you could slurp em all back in one go, our latest range of do gooding juices taste as fruity as they make you feel.',
                         heading1: 'KARMA DRINKS',
                         heading2: 'ORGANIC ORANGE',
                         imagePath: 'assets/images/karma-drinks.png',
                         text: 'RM 8.00 each',
                       ),
                       ProductContainerWidget(
+                        description: 'Refreshing, revitalising and so scrumptious you could slurp em all back in one go, our latest range of do gooding juices taste as fruity as they make you feel.',
                         heading1: 'PROPER CRIPS CIDER',
                         heading2: 'VINEGAR 140G',
                         imagePath: 'assets/images/crisp-cider.png',
                         text: 'RM 10.00 each',
                       ),
                       ProductContainerWidget(
+                        description: 'Refreshing, revitalising and so scrumptious you could slurp em all back in one go, our latest range of do gooding juices taste as fruity as they make you feel.',
                         heading1: 'KARMA DRINKS',
                         heading2: 'ORGANIC ORANGE',
                         imagePath: 'assets/images/karma-drinks.png',
                         text: 'RM 8.00 each',
                       ),
                       ProductContainerWidget(
+                        description: 'Refreshing, revitalising and so scrumptious you could slurp em all back in one go, our latest range of do gooding juices taste as fruity as they make you feel.',
                         heading1: 'PROPER CRIPS CIDER',
                         heading2: 'VINEGAR 140G',
                         imagePath: 'assets/images/crisp-cider.png',
