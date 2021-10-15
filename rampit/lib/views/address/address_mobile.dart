@@ -92,6 +92,7 @@ class _AddressMobile extends StatelessWidget {
                         child: Padding(
                           padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
                           child: DropdownButton<String>(
+                            
                             underline: SizedBox(),
                             value: this.viewModel.selectedArea,
                             dropdownColor: MyStyles.themeData().backgroundColor,
@@ -129,14 +130,13 @@ class _AddressMobile extends StatelessWidget {
                         child: TextFormField(
                           decoration: InputDecoration(
                             isDense: true,
-                            focusedErrorBorder:OutlineInputBorder(
+                            focusedErrorBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(5),
                               borderSide: BorderSide(
                                 color: MyStyles.themeData().highlightColor,
                                 width: 1.5,
                               ),
                             ),
-
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(5),
                               borderSide: BorderSide(
@@ -165,7 +165,7 @@ class _AddressMobile extends StatelessWidget {
                             ),
                             label: Text(
                               'Post Code',
-                                style:TextStyle(
+                              style: TextStyle(
                                 color: MyStyles.themeData().primaryColorLight,
                               ),
                             ),
@@ -193,7 +193,7 @@ class _AddressMobile extends StatelessWidget {
                       ),
                     ),
                   ),
-                   Container(
+                  Container(
                     width: 100.w,
                     height: 9.h,
                     child: Align(
@@ -203,14 +203,13 @@ class _AddressMobile extends StatelessWidget {
                         child: TextFormField(
                           decoration: InputDecoration(
                             isDense: true,
-                            focusedErrorBorder:OutlineInputBorder(
+                            focusedErrorBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(5),
                               borderSide: BorderSide(
                                 color: MyStyles.themeData().highlightColor,
                                 width: 1.5,
                               ),
                             ),
-
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(5),
                               borderSide: BorderSide(
@@ -241,7 +240,7 @@ class _AddressMobile extends StatelessWidget {
                             focusColor: MyStyles.themeData().highlightColor,
                             label: Text(
                               'Unit Number,House Number,Street Name',
-                                style:TextStyle(
+                              style: TextStyle(
                                 color: MyStyles.themeData().primaryColorLight,
                               ),
                             ),
@@ -275,7 +274,10 @@ class _AddressMobile extends StatelessWidget {
                         height: 30.h,
                         width: 87.w,
                         child: Center(
-                          child: Image.asset('assets/images/map.jpg', fit: BoxFit.fill,),
+                          child: Image.asset(
+                            'assets/images/map.jpg',
+                            fit: BoxFit.fill,
+                          ),
                         ),
                         decoration: BoxDecoration(
                             border: Border.all(
@@ -430,12 +432,14 @@ class _AddressMobile extends StatelessWidget {
                                                 MyStyles.themeData()
                                                     .primaryColor)),
                                     onPressed: () {
-                                      if (_formKey.currentState.validate()) {}
+                                      if (_formKey.currentState.validate()) {
+                                        this.viewModel.goToConfirmDelivery();
+                                      }
                                       return false;
                                     },
                                     child: Center(
                                       child: Text(
-                                        'Confirm',
+                                        'Next',
                                         style: TextStyle(
                                             color: MyStyles.themeData()
                                                 .backgroundColor),

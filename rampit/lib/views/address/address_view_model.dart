@@ -1,8 +1,13 @@
 import 'package:flutter/cupertino.dart';
+import 'package:rampit/core/locator.dart';
+import 'package:rampit/core/router_constants.dart';
 import 'package:rampit/theme/styles.dart';
 import 'package:stacked/stacked.dart';
+import 'package:stacked_services/stacked_services.dart';
 
 class AddressViewModel extends BaseViewModel {
+  NavigationService nav = locator<NavigationService>();
+
   Color _homeButton;
   Color get homeButton => this._homeButton;
   set homeButton(Color value) {
@@ -102,5 +107,9 @@ class AddressViewModel extends BaseViewModel {
       this.homeButton = MyStyles.themeData().primaryColor;
       this.officeButton = MyStyles.themeData().primaryColorLight;
     }
+  }
+
+  goToConfirmDelivery() {
+    this.nav.navigateTo(deliveryConfirmViewRoute);
   }
 }
