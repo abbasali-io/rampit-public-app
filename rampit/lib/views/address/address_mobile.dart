@@ -92,7 +92,6 @@ class _AddressMobile extends StatelessWidget {
                         child: Padding(
                           padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
                           child: DropdownButton<String>(
-                            
                             underline: SizedBox(),
                             value: this.viewModel.selectedArea,
                             dropdownColor: MyStyles.themeData().backgroundColor,
@@ -433,7 +432,9 @@ class _AddressMobile extends StatelessWidget {
                                                     .primaryColor)),
                                     onPressed: () {
                                       if (_formKey.currentState.validate()) {
-                                        this.viewModel.goToConfirmDelivery();
+                                        this
+                                            .viewModel
+                                            .goToConfirmDeliveryPage();
                                       }
                                       return false;
                                     },

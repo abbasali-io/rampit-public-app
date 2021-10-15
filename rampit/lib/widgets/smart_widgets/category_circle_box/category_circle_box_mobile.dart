@@ -3,8 +3,9 @@ part of category_circle_box_widget;
 class _CategoryCircleBoxMobile extends StatelessWidget {
   final String catName;
   final String catImagePath;
+  final CategoryCircleBoxViewModel viewModel;
   _CategoryCircleBoxMobile(
-      {@required this.catName, @required this.catImagePath});
+      {@required this.catName, @required this.catImagePath, @required this.viewModel});
   @override
   Widget build(BuildContext context) {
     ScreenUtil.init(
@@ -14,7 +15,9 @@ class _CategoryCircleBoxMobile extends StatelessWidget {
       designSize: Size(100, 100),
     );
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        this.viewModel.nav.navigateTo(categoryViewRoute);
+      },
       child: Container(
         width: 20.w,
         child: Column(

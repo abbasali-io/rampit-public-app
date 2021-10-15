@@ -1,6 +1,7 @@
 library category_circle_box_widget;
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:rampit/core/router_constants.dart';
 import 'package:rampit/theme/styles.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:flutter/material.dart';
@@ -21,7 +22,7 @@ class CategoryCircleBoxWidget extends StatelessWidget {
     return ViewModelBuilder<CategoryCircleBoxViewModel>.reactive(
       builder: (BuildContext context, CategoryCircleBoxViewModel viewModel, Widget _) {
         return ScreenTypeLayout(
-          mobile: _CategoryCircleBoxMobile(catName: this.catName, catImagePath: this.catImagePath,),
+          mobile: _CategoryCircleBoxMobile(viewModel:viewModel,catName:  this.catName, catImagePath: this.catImagePath,),
           desktop: _CategoryCircleBoxDesktop(),
           tablet: _CategoryCircleBoxTablet(),
         );

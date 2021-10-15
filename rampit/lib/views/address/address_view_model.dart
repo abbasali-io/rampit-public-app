@@ -6,7 +6,7 @@ import 'package:stacked/stacked.dart';
 import 'package:stacked_services/stacked_services.dart';
 
 class AddressViewModel extends BaseViewModel {
-  NavigationService nav = locator<NavigationService>();
+  NavigationService _nav = locator<NavigationService>();
 
   Color _homeButton;
   Color get homeButton => this._homeButton;
@@ -77,6 +77,10 @@ class AddressViewModel extends BaseViewModel {
     this.selectedArea = 'Lahore';
   }
 
+  void goToConfirmDeliveryPage() {
+    this._nav.navigateTo(deliveryConfirmViewRoute);
+  }
+
   selectState({String value}) {
     if (value == 'Punjab') {
       this.selectedState = value;
@@ -107,9 +111,5 @@ class AddressViewModel extends BaseViewModel {
       this.homeButton = MyStyles.themeData().primaryColor;
       this.officeButton = MyStyles.themeData().primaryColorLight;
     }
-  }
-
-  goToConfirmDelivery() {
-    this.nav.navigateTo(deliveryConfirmViewRoute);
   }
 }
