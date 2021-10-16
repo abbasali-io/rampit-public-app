@@ -1,5 +1,5 @@
 {
-    "last_updated": "Sat, 16 Oct 2021 12:48:09 GMT",
+    "last_updated": "Sat, 16 Oct 2021 22:41:23 GMT",
     "routes": [
         {
             "file_path": "views/address/address_view.dart",
@@ -45,6 +45,11 @@
             "file_path": "views/check_out/check_out_view.dart",
             "route_name": "check_outViewRoute",
             "view_name": "CheckOutView"
+        },
+        {
+            "file_path": "views/order_placed/order_placed_view.dart",
+            "route_name": "order_placedViewRoute",
+            "view_name": "OrderPlacedView"
         }
     ]
 }

@@ -5,15 +5,15 @@ import 'package:stacked/stacked.dart';
 import 'package:rampit/core/logger.dart';
 import 'package:stacked_services/stacked_services.dart';
 
-class CheckOutViewModel extends BaseViewModel {
+class OrderPlacedViewModel extends BaseViewModel {
   Logger log;
   NavigationService _nav = locator<NavigationService>();
 
-  CheckOutViewModel() {
+  OrderPlacedViewModel() {
     this.log = getLogger(this.runtimeType.toString());
   }
 
-  goToOrderPlacedPage() {
-    this._nav.navigateTo(orderPlacedViewRoute);
+  goToHomePage() {
+    this._nav.navigateTo(homeViewRoute);
   }
 }

@@ -35,7 +35,9 @@ class _CheckOutMobile extends StatelessWidget {
               btnText: 'Pay Now',
               tPrice: '18.00',
               tPriceShow: true,
-              onTap: () {},
+              onTap: () {
+                this.viewModel.goToOrderPlacedPage();
+              },
             )),
       ),
       body: SafeArea(
@@ -52,104 +54,102 @@ class _CheckOutMobile extends StatelessWidget {
                   Container(
                     height: 20.h,
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(5),
+                        borderRadius: BorderRadius.circular(5),
                         border: Border.all(style: BorderStyle.solid)),
                     child: Center(
                       child: Container(
-                        width: 80.w,
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Container(
-                              height: 4.h,
-                              width: 80.w,
-                              child: Align(
-                                alignment: Alignment.centerLeft,
-                                child:  Text(
-                                  'B-11-03, Residensi Kepongmas',
-                                  maxLines:1,
-                                  overflow: TextOverflow.ellipsis,
-                                  style: TextStyle(
-                                    color: MyStyles.themeData().highlightColor,
-                                    fontSize: 5.sp,
-                                    overflow: TextOverflow.ellipsis,
-                                  ),
-                                ),
-                              )
-                            ),
-                            Container(
-                              height: 3.h,
-                              width: 80.w,
-                              child: Align(
-                                alignment: Alignment.centerLeft,
-                                child: Text(
-                                  'Meet at guard house',
-                                  maxLines:1,
-                                  overflow: TextOverflow.ellipsis,
-                                  style: TextStyle(
-                                    color: MyStyles.themeData().primaryColorLight,
-                                    fontSize: 4.sp,
-                                    overflow: TextOverflow.ellipsis,
-                                  ),
-                                ),
-                              )
-                            ),
-                            Container(
-                              height: 9.h,
-                              width: 80.w,
-                              child: Align(
-                                alignment: Alignment.centerLeft,
-                                child: Row(
-                                  children: [
-                                    Container(
-                                      width: 10.w,
-                                      height: 5.h,
-                                      decoration: BoxDecoration(
-                                        color: MyStyles.themeData().highlightColor,
-                                        borderRadius: BorderRadius.circular(7),
-                                        image: DecorationImage(
-                                          image: AssetImage('assets/icons/clock.png'),
-                                          fit: BoxFit.scaleDown
-                                        )
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      width: 5.w
-                                    ),
-                                    Text(
-                                      '15 Mins',
-                                      maxLines:1,
+                          width: 80.w,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Container(
+                                  height: 4.h,
+                                  width: 80.w,
+                                  child: Align(
+                                    alignment: Alignment.centerLeft,
+                                    child: Text(
+                                      'B-11-03, Residensi Kepongmas',
+                                      maxLines: 1,
                                       overflow: TextOverflow.ellipsis,
                                       style: TextStyle(
-                                        color: MyStyles.themeData().highlightColor,
-                                        fontSize: 4.sp,
-                                        fontWeight: FontWeight.bold,
+                                        color:
+                                            MyStyles.themeData().highlightColor,
+                                        fontSize: 5.sp,
                                         overflow: TextOverflow.ellipsis,
                                       ),
                                     ),
-                                  ],
-                                ),
-                              )
-                            ),
-                            Container(
-                              height: 3.h,
-                              child: Align(
-                                alignment: Alignment.centerLeft,
-                                child: Text(
-                                  'Instructions : Special Instructions by user',
-                                  maxLines:1,
-                                  overflow: TextOverflow.ellipsis,
-                                  style: TextStyle(
-                                    color: MyStyles.themeData().primaryColorLight,
-                                    fontSize: 4.sp,
-                                    overflow: TextOverflow.ellipsis,
-                                  ),
-                                ),
-                              )
-                            )
-                          ],
-                        )
-                      ),
+                                  )),
+                              Container(
+                                  height: 3.h,
+                                  width: 80.w,
+                                  child: Align(
+                                    alignment: Alignment.centerLeft,
+                                    child: Text(
+                                      'Meet at guard house',
+                                      maxLines: 1,
+                                      overflow: TextOverflow.ellipsis,
+                                      style: TextStyle(
+                                        color: MyStyles.themeData()
+                                            .primaryColorLight,
+                                        fontSize: 4.sp,
+                                        overflow: TextOverflow.ellipsis,
+                                      ),
+                                    ),
+                                  )),
+                              Container(
+                                  height: 9.h,
+                                  width: 80.w,
+                                  child: Align(
+                                    alignment: Alignment.centerLeft,
+                                    child: Row(
+                                      children: [
+                                        Container(
+                                          width: 10.w,
+                                          height: 5.h,
+                                          decoration: BoxDecoration(
+                                              color: MyStyles.themeData()
+                                                  .highlightColor,
+                                              borderRadius:
+                                                  BorderRadius.circular(7),
+                                              image: DecorationImage(
+                                                  image: AssetImage(
+                                                      'assets/icons/clock.png'),
+                                                  fit: BoxFit.scaleDown)),
+                                        ),
+                                        SizedBox(width: 5.w),
+                                        Text(
+                                          '15 Mins',
+                                          maxLines: 1,
+                                          overflow: TextOverflow.ellipsis,
+                                          style: TextStyle(
+                                            color: MyStyles.themeData()
+                                                .highlightColor,
+                                            fontSize: 4.sp,
+                                            fontWeight: FontWeight.bold,
+                                            overflow: TextOverflow.ellipsis,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  )),
+                              Container(
+                                  height: 3.h,
+                                  child: Align(
+                                    alignment: Alignment.centerLeft,
+                                    child: Text(
+                                      'Instructions : Special Instructions by user',
+                                      maxLines: 1,
+                                      overflow: TextOverflow.ellipsis,
+                                      style: TextStyle(
+                                        color: MyStyles.themeData()
+                                            .primaryColorLight,
+                                        fontSize: 4.sp,
+                                        overflow: TextOverflow.ellipsis,
+                                      ),
+                                    ),
+                                  ))
+                            ],
+                          )),
                     ),
                   ),
                   SizedBox(
@@ -207,8 +207,7 @@ class _CheckOutMobile extends StatelessWidget {
                               ),
                             ),
                           ),
-                        )
-                      ),
+                        )),
                   ),
                 ],
               ),
