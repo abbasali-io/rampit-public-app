@@ -25,32 +25,33 @@ class _MyCartBottomNavMobile extends StatelessWidget {
       //mainAxisSize: MainAxisSize.max,
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        this.tPriceShow == true?
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Padding(
-              padding: EdgeInsets.fromLTRB(5.w, 0, 0, 0),
-              child: Text(
-                'Total',
-                style: TextStyle(
-                    color: MyStyles.themeData().highlightColor,
-                    fontSize: 4.sp,
-                    fontWeight: FontWeight.bold),
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.fromLTRB(0, 0, 5.w, 0),
-              child: Text(
-                'RM ' + this.tPrice,
-                style: TextStyle(
-                    color: MyStyles.themeData().highlightColor,
-                    fontSize: 4.sp,
-                    fontWeight: FontWeight.bold),
-              ),
-            ),
-          ],
-        ):Container(),
+        this.tPriceShow == true
+            ? Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(10.w, 0, 0, 0),
+                    child: Text(
+                      'Total',
+                      style: TextStyle(
+                          color: MyStyles.themeData().highlightColor,
+                          fontSize: 4.sp,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(0, 0, 9.w, 0),
+                    child: Text(
+                      'RM ' + this.tPrice,
+                      style: TextStyle(
+                          color: MyStyles.themeData().highlightColor,
+                          fontSize: 4.sp,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                ],
+              )
+            : Container(),
         Divider(
           thickness: 0.1.h,
         ),

@@ -20,7 +20,9 @@ class _HomeMobile extends StatelessWidget {
         elevation: 10,
         backgroundColor: MyStyles.themeData().backgroundColor,
         child: const FaIcon(FontAwesomeIcons.shoppingCart, color: Colors.black),
-        onPressed: () {},
+        onPressed: () {
+          this.viewModel.navigateToPage(pageIndex: 5);
+        },
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: 0,
@@ -31,7 +33,7 @@ class _HomeMobile extends StatelessWidget {
         type: BottomNavigationBarType.fixed,
         elevation: 40,
         onTap: (index) {
-          this.viewModel.navigateToPage(pageIndex: index);
+          
         },
         items: [
           BottomNavigationBarItem(

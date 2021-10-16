@@ -7,8 +7,7 @@ import 'package:stacked_services/stacked_services.dart';
 class HomeViewModel extends BaseViewModel {
   NavigationService nav = locator<NavigationService>();
 
-  HomeViewModel() {
-  }
+  HomeViewModel() {}
 
   navigateToPage({@required int pageIndex}) {
     switch (pageIndex) {
@@ -18,6 +17,10 @@ class HomeViewModel extends BaseViewModel {
           break;
         }
       case 1:
+        {
+          break;
+        }
+      case 5:
         {
           nav.navigateTo(myCartViewRoute);
           break;

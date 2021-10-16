@@ -1,5 +1,6 @@
 import 'package:logger/logger.dart';
 import 'package:rampit/core/locator.dart';
+import 'package:rampit/core/router_constants.dart';
 import 'package:stacked/stacked.dart';
 import 'package:rampit/core/logger.dart';
 import 'package:stacked_services/stacked_services.dart';
@@ -34,6 +35,8 @@ class ConfirmOrderPlaceViewModel extends BaseViewModel {
   }
 
   void goToCheckOutPage() {
-    this._nav.navigateTo('');
+    if(this.selectedValue.isNotEmpty){
+      this._nav.navigateTo(checkOutViewRoute);
+    }
   }
 }

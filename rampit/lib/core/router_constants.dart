@@ -8,3 +8,4 @@ const String productViewRoute = 'productViewRoute';
 const String deliveryConfirmViewRoute = 'deliveryConfirmViewRoute';
 const String myCartViewRoute = 'myCartViewRoute';
 const String confirmOrderPlaceViewRoute = 'confirmOrderPlaceViewRoute';
+const String checkOutViewRoute = 'checkOutViewRoute';
