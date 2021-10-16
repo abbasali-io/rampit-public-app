@@ -56,13 +56,22 @@ class _MyCartMobile extends StatelessWidget {
                           color: Color.fromRGBO(226, 236, 243, 1),
                           icon: FontAwesomeIcons.edit,
                           foregroundColor: MyStyles.themeData().backgroundColor,
-                          onTap: () {},
+                          onTap: () {
+                            this.viewModel.goToProductPage(
+                                imagePath: 'assets/images/crisp-cider.png',
+                                heading2: 'RM 10.00 each',
+                                heading1: 'PROPER CRIPS CIDER VINEGAR 140G',
+                                description:
+                                    'Refreshing, revitalising and so scrumptious you could slurp em all back in one go, our latest range of do gooding juices taste as fruity as they make you feel.');
+                          },
                         ),
                         IconSlideAction(
                           color: MyStyles.themeData().primaryColorLight,
                           icon: FontAwesomeIcons.trash,
                           foregroundColor: MyStyles.themeData().primaryColor,
-                          onTap: () {},
+                          onTap: () {
+                            
+                          },
                         ),
                       ],
                       actions: [
@@ -70,7 +79,14 @@ class _MyCartMobile extends StatelessWidget {
                           color: Color.fromRGBO(226, 236, 243, 1),
                           icon: FontAwesomeIcons.edit,
                           foregroundColor: MyStyles.themeData().backgroundColor,
-                          onTap: () {},
+                          onTap: () {
+                            this.viewModel.goToProductPage(
+                                imagePath: 'assets/images/crisp-cider.png',
+                                heading2: 'RM 10.00 each',
+                                heading1: 'PROPER CRIPS CIDER VINEGAR 140G',
+                                description:
+                                    'Refreshing, revitalising and so scrumptious you could slurp em all back in one go, our latest range of do gooding juices taste as fruity as they make you feel.');
+                          },
                         ),
                         IconSlideAction(
                           color: MyStyles.themeData().primaryColorLight,
