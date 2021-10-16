@@ -11,7 +11,7 @@ class MyStyles {
       highlightColor: info,
       primaryColor: primary,
       primaryColorLight: secondary,
-      backgroundColor: white
+      backgroundColor: white,
     );
   }
 }

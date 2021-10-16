@@ -2,15 +2,7 @@ part of home_view;
 
 class _HomeMobile extends StatelessWidget {
   final HomeViewModel viewModel;
-  final Shader linearGradient = LinearGradient(
-    begin: Alignment.topCenter,
-    end: Alignment.bottomCenter,
-    colors: <Color>[
-      Color.fromRGBO(214, 242, 255, 1),
-      Color.fromRGBO(255, 192, 0, 1)
-    ],
-  ).createShader(Rect.fromLTWH(0, 0, 0, 0));
-
+  
   _HomeMobile(this.viewModel);
 
   @override
@@ -272,28 +264,32 @@ class _HomeMobile extends StatelessWidget {
                     scrollDirection: Axis.horizontal,
                     children: [
                       ProductContainerWidget(
-                        description: 'Refreshing, revitalising and so scrumptious you could slurp em all back in one go, our latest range of do gooding juices taste as fruity as they make you feel.Refreshing, revitalising and so scrumptious you could slurp em all back in one go, our latest range of do gooding juices taste as fruity as they make you feel.',
+                        description:
+                            'Refreshing, revitalising and so scrumptious you could slurp em all back in one go, our latest range of do gooding juices taste as fruity as they make you feel.Refreshing, revitalising and so scrumptious you could slurp em all back in one go, our latest range of do gooding juices taste as fruity as they make you feel.',
                         heading1: 'KARMA DRINKS',
                         heading2: 'ORGANIC ORANGE',
                         imagePath: 'assets/images/karma-drinks.png',
                         text: 'RM 8.00 each',
                       ),
                       ProductContainerWidget(
-                        description: 'Refreshing, revitalising and so scrumptious you could slurp em all back in one go, our latest range of do gooding juices taste as fruity as they make you feel.',
+                        description:
+                            'Refreshing, revitalising and so scrumptious you could slurp em all back in one go, our latest range of do gooding juices taste as fruity as they make you feel.',
                         heading1: 'PROPER CRIPS CIDER',
                         heading2: 'VINEGAR 140G',
                         imagePath: 'assets/images/crisp-cider.png',
                         text: 'RM 10.00 each',
                       ),
                       ProductContainerWidget(
-                        description: 'Refreshing, revitalising and so scrumptious you could slurp em all back in one go, our latest range of do gooding juices taste as fruity as they make you feel.',
+                        description:
+                            'Refreshing, revitalising and so scrumptious you could slurp em all back in one go, our latest range of do gooding juices taste as fruity as they make you feel.',
                         heading1: 'KARMA DRINKS',
                         heading2: 'ORGANIC ORANGE',
                         imagePath: 'assets/images/karma-drinks.png',
                         text: 'RM 8.00 each',
                       ),
                       ProductContainerWidget(
-                        description: 'Refreshing, revitalising and so scrumptious you could slurp em all back in one go, our latest range of do gooding juices taste as fruity as they make you feel.',
+                        description:
+                            'Refreshing, revitalising and so scrumptious you could slurp em all back in one go, our latest range of do gooding juices taste as fruity as they make you feel.',
                         heading1: 'PROPER CRIPS CIDER',
                         heading2: 'VINEGAR 140G',
                         imagePath: 'assets/images/crisp-cider.png',

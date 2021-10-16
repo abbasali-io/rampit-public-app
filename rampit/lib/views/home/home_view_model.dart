@@ -19,7 +19,7 @@ class HomeViewModel extends BaseViewModel {
         }
       case 1:
         {
-          //nav.navigateTo(categoryViewRoute);
+          nav.navigateTo(myCartViewRoute);
           break;
         }
       default:
