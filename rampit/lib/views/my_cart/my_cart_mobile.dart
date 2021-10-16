@@ -34,6 +34,10 @@ class _MyCartMobile extends StatelessWidget {
               child: MyCartBottomNavWidget(
                 btnText: 'Check Out',
                 tPrice: '18.00',
+                tPriceShow: true,
+                onTap: () {
+                  this.viewModel.goToConfirmOrderPlace();
+                },
               )),
         ),
         body: SafeArea(
@@ -69,9 +73,7 @@ class _MyCartMobile extends StatelessWidget {
                           color: MyStyles.themeData().primaryColorLight,
                           icon: FontAwesomeIcons.trash,
                           foregroundColor: MyStyles.themeData().primaryColor,
-                          onTap: () {
-                            
-                          },
+                          onTap: () {},
                         ),
                       ],
                       actions: [

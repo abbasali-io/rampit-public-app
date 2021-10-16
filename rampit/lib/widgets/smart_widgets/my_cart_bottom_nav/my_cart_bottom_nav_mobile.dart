@@ -4,10 +4,14 @@ class _MyCartBottomNavMobile extends StatelessWidget {
   final String btnText;
   final String tPrice;
   final MyCartBottomNavViewModel viewModel;
+  final Function onTap;
+  final bool tPriceShow;
   _MyCartBottomNavMobile({
+    @required this.tPriceShow,
     @required this.viewModel,
     @required this.btnText,
     @required this.tPrice,
+    @required this.onTap,
   });
   @override
   Widget build(BuildContext context) {
@@ -21,6 +25,7 @@ class _MyCartBottomNavMobile extends StatelessWidget {
       //mainAxisSize: MainAxisSize.max,
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
+        this.tPriceShow == true?
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -37,7 +42,7 @@ class _MyCartBottomNavMobile extends StatelessWidget {
             Padding(
               padding: EdgeInsets.fromLTRB(0, 0, 5.w, 0),
               child: Text(
-                'RM '+ this.tPrice,
+                'RM ' + this.tPrice,
                 style: TextStyle(
                     color: MyStyles.themeData().highlightColor,
                     fontSize: 4.sp,
@@ -45,7 +50,7 @@ class _MyCartBottomNavMobile extends StatelessWidget {
               ),
             ),
           ],
-        ),
+        ):Container(),
         Divider(
           thickness: 0.1.h,
         ),
@@ -57,7 +62,7 @@ class _MyCartBottomNavMobile extends StatelessWidget {
                 elevation: MaterialStateProperty.all(5),
                 backgroundColor: MaterialStateProperty.all(
                     MyStyles.themeData().primaryColor)),
-            onPressed: () {},
+            onPressed: onTap,
             child: Text(
               this.btnText,
               style: TextStyle(fontSize: 4.sp, fontWeight: FontWeight.bold),

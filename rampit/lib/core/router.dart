@@ -10,6 +10,7 @@ import 'package:rampit/views/category/category_view.dart' as view3;
 import 'package:rampit/views/product/product_view.dart' as view4;
 import 'package:rampit/views/delivery_confirm/delivery_confirm_view.dart' as view5;
 import 'package:rampit/views/my_cart/my_cart_view.dart' as view6;
+import 'package:rampit/views/confirm_order_place/confirm_order_place_view.dart' as view7;
 
 class Router {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -28,6 +29,8 @@ class Router {
         return MaterialPageRoute(builder: (_) => view5.DeliveryConfirmView());
       case myCartViewRoute:
         return MaterialPageRoute(builder: (_) => view6.MyCartView());
+      case confirmOrderPlaceViewRoute:
+        return MaterialPageRoute(builder: (_) => view7.ConfirmOrderPlaceView());
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(

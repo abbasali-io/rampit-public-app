@@ -14,16 +14,27 @@ part 'my_cart_bottom_nav_desktop.dart';
 class MyCartBottomNavWidget extends StatelessWidget {
   final String btnText;
   final String tPrice;
+  final Function onTap;
+  final bool tPriceShow;
   MyCartBottomNavWidget({
+    @required this.onTap,
     @required this.btnText,
     @required this.tPrice,
+    @required this.tPriceShow,
   });
   @override
   Widget build(BuildContext context) {
     return ViewModelBuilder<MyCartBottomNavViewModel>.reactive(
-      builder: (BuildContext context, MyCartBottomNavViewModel viewModel, Widget _) {
+      builder:
+          (BuildContext context, MyCartBottomNavViewModel viewModel, Widget _) {
         return ScreenTypeLayout(
-          mobile: _MyCartBottomNavMobile(viewModel: viewModel, btnText: btnText,tPrice: tPrice,),
+          mobile: _MyCartBottomNavMobile(
+            viewModel: viewModel,
+            btnText: btnText,
+            tPrice: tPrice,
+            onTap: onTap,
+            tPriceShow: tPriceShow,
+          ),
           desktop: _MyCartBottomNavDesktop(),
           tablet: _MyCartBottomNavTablet(),
         );

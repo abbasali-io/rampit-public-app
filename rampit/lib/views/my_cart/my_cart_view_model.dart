@@ -27,4 +27,8 @@ class MyCartViewModel extends BaseViewModel {
     this._prod.description = description;
     this._nav.navigateTo(productViewRoute);
   }
+
+  goToConfirmOrderPlace() {
+    this._nav.navigateTo(confirmOrderPlaceViewRoute);
+  }
 }
