@@ -33,7 +33,7 @@ class _HomeMobile extends StatelessWidget {
         type: BottomNavigationBarType.fixed,
         elevation: 40,
         onTap: (index) {
-          
+          this.viewModel.navigateToPage(pageIndex: index);
         },
         items: [
           BottomNavigationBarItem(

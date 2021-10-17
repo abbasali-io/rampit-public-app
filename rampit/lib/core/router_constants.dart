@@ -10,3 +10,4 @@ const String myCartViewRoute = 'myCartViewRoute';
 const String confirmOrderPlaceViewRoute = 'confirmOrderPlaceViewRoute';
 const String checkOutViewRoute = 'checkOutViewRoute';
 const String orderPlacedViewRoute = 'orderPlacedViewRoute';
+const String searchViewRoute = 'searchViewRoute';

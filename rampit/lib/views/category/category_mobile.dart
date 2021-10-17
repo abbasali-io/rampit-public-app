@@ -43,20 +43,30 @@ class _CategoryMobile extends StatelessWidget {
                           scrollDirection: Axis.horizontal,
                           itemCount: this.viewModel.catTagList.length,
                           itemBuilder: (BuildContext context, int index) {
-                            return Container(
-                              padding: EdgeInsets.fromLTRB(0, 0, 5.w, 0),
-                              child: InkWell(
-                                onTap: () {
-                                  this.viewModel.selectTagUpdateValue(
-                                      selectedTag:
-                                          this.viewModel.catTagList[index]);
-                                },
-                                child: TagContainerStyleWidget(
-                                    tagActive: this.viewModel.activeTagStatus(
+                            return Row(
+                              children: [
+                                Container(
+                                  child: InkWell(
+                                    onTap: () {
+                                      this.viewModel.selectTagUpdateValue(
+                                          selectedTag:
+                                              this.viewModel.catTagList[index]);
+                                    },
+                                    child: TagContainerStyleWidget(
+                                        tagActive: this
+                                            .viewModel
+                                            .activeTagStatus(
+                                                tagName: this
+                                                    .viewModel
+                                                    .catTagList[index]),
                                         tagName:
                                             this.viewModel.catTagList[index]),
-                                    tagName: this.viewModel.catTagList[index]),
-                              ),
+                                  ),
+                                ),
+                                SizedBox(
+                                  width: 5.w,
+                                ),
+                              ],
                             );
                           },
                         ),
@@ -84,11 +94,10 @@ class _CategoryMobile extends StatelessWidget {
                         itemBuilder: (BuildContext context, int index) {
                           return InkWell(
                             splashColor: MyStyles.themeData().primaryColor,
-                            onTap: (){
-
-                            },
+                            onTap: () {},
                             child: ProductContainerWidget(
-                              description: 'Refreshing, revitalising and so scrumptious you could slurp em all back in one go, our latest range of do gooding juices taste as fruity as they make you feel.',
+                              description:
+                                  'Refreshing, revitalising and so scrumptious you could slurp em all back in one go, our latest range of do gooding juices taste as fruity as they make you feel.',
                               heading1: 'KARMA DRINKS',
                               heading2: 'ORGANIC ORANGE',
                               imagePath: 'assets/images/karma-drinks.png',
