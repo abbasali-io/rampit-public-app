@@ -67,6 +67,6 @@ class OnBoardingViewModel extends BaseViewModel {
   }
 
   void goToRegisterPage() {
-    _nav.navigateTo(homeViewRoute);
+    _nav.navigateTo(registrationViewRoute);
   }
 }

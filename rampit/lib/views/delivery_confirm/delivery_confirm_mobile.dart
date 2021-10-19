@@ -36,58 +36,61 @@ class _DeliveryConfirmMobile extends StatelessWidget {
               padding: EdgeInsets.fromLTRB(5.w, 5.h, 0.w, 5.h),
               child: ElevatedButton(
                 style: ButtonStyle(
-                  padding: MaterialStateProperty.all(EdgeInsets.fromLTRB(5.w, 2.h, 5.w, 2.h)),
-                  elevation: MaterialStateProperty.all(5),
-                  backgroundColor: MaterialStateProperty.all(MyStyles.themeData().primaryColorLight)
-                ),
-                onPressed: (){}, 
+                    padding: MaterialStateProperty.all(
+                        EdgeInsets.fromLTRB(5.w, 2.h, 5.w, 2.h)),
+                    elevation: MaterialStateProperty.all(5),
+                    backgroundColor: MaterialStateProperty.all(
+                        MyStyles.themeData().primaryColorLight)),
+                onPressed: () {},
                 child: Text(
                   'Cancel',
-                  style: TextStyle(
-                    fontSize: 4.sp,
-                    fontWeight: FontWeight.bold
-                  ),
+                  style: TextStyle(fontSize: 4.sp, fontWeight: FontWeight.bold),
                 ),
               ),
             ),
-             Container(
+            Container(
               padding: EdgeInsets.fromLTRB(5.w, 5.h, 5.w, 5.h),
               child: ElevatedButton(
                 style: ButtonStyle(
-                  padding: MaterialStateProperty.all(EdgeInsets.fromLTRB(5.w, 2.h, 5.w, 2.h)),
-                  elevation: MaterialStateProperty.all(5),
-                  backgroundColor: MaterialStateProperty.all(MyStyles.themeData().primaryColor)
-                ),
-                onPressed: (){}, 
+                    padding: MaterialStateProperty.all(
+                        EdgeInsets.fromLTRB(5.w, 2.h, 5.w, 2.h)),
+                    elevation: MaterialStateProperty.all(5),
+                    backgroundColor: MaterialStateProperty.all(
+                        MyStyles.themeData().primaryColor)),
+                onPressed: () {
+                  this.viewModel.goToHomePage();
+                },
                 child: Text(
                   'Confirm',
-                  style: TextStyle(
-                    fontSize: 4.sp,
-                    fontWeight: FontWeight.bold
-                  ),
+                  style: TextStyle(fontSize: 4.sp, fontWeight: FontWeight.bold),
                 ),
               ),
             ),
           ],
         ),
-      
       ),
       body: SafeArea(
           child: Container(
-            color: MyStyles.themeData().backgroundColor,
-            width: 100.w,
-            height: 100.h,
-            child: Center(
-        child: Container(
+        color: MyStyles.themeData().backgroundColor,
+        width: 100.w,
+        height: 100.h,
+        child: Center(
+          child: Container(
             padding: EdgeInsets.fromLTRB(0, 5.h, 0, 0),
             width: 90.w,
             height: 100.h,
             child: ListView.builder(
               itemCount: this.viewModel.radioBtnValues.length,
               itemBuilder: (BuildContext context, int index) {
-                var mints = int.parse(this.viewModel.radioBtnValues[index]) + 10;
+                var mints =
+                    int.parse(this.viewModel.radioBtnValues[index]) + 10;
                 return ListTile(
-                  subtitle: Text('Max '+ mints.toString() +' Items per order', style: TextStyle(color: MyStyles.themeData().primaryColor, fontSize: 3.5.sp),),
+                  subtitle: Text(
+                    'Max ' + mints.toString() + ' Items per order',
+                    style: TextStyle(
+                        color: MyStyles.themeData().primaryColor,
+                        fontSize: 3.5.sp),
+                  ),
                   //leading: Text('Max '+ mints.toString() +' Items per order'),
                   title: Text(
                     this.viewModel.radioBtnValues[index] + ' Minutes Delivery',
@@ -110,9 +113,9 @@ class _DeliveryConfirmMobile extends StatelessWidget {
                 );
               },
             ),
+          ),
         ),
-      ),
-          )),
+      )),
     );
   }
 }

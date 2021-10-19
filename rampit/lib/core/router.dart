@@ -15,6 +15,7 @@ import 'package:rampit/views/check_out/check_out_view.dart' as view8;
 import 'package:rampit/views/order_placed/order_placed_view.dart' as view9;
 import 'package:rampit/views/search/search_view.dart' as view10;
 import 'package:rampit/views/on_boarding/on_boarding_view.dart' as view11;
+import 'package:rampit/views/registration/registration_view.dart' as view12;
 
 class Router {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -43,6 +44,8 @@ class Router {
         return MaterialPageRoute(builder: (_) => view10.SearchView());
       case onBoardingViewRoute:
         return MaterialPageRoute(builder: (_) => view11.OnBoardingView());
+      case registrationViewRoute:
+        return MaterialPageRoute(builder: (_) => view12.RegistrationView());
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(

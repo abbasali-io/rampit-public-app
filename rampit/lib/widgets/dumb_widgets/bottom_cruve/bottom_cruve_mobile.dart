@@ -77,30 +77,20 @@ class _BottomCruveMobile extends StatelessWidget {
                     ),
                   ),
                   Positioned.fill(
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(30),
-                      child: BackdropFilter(
-                        filter: ImageFilter.blur(
-                            sigmaX: 5, sigmaY: 5), //glass effect
-                        child: Container(
+                    child:  Container(
                           alignment: Alignment.center,
                           height: size.height * 0.080,
                           width: size.width * 0.090,
-                          decoration: BoxDecoration(
-                            color: MyStyles.themeData()
-                                .backgroundColor
-                                .withOpacity(0.15),
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.only(top: 15, right: 10),
-                            child: Image.asset(
+                          child: Image.asset(
                               'assets/images/onBoardingBtn.png',
                             ),
-                          ),
+                          // Padding(
+                          //   padding: const EdgeInsets.only(top: 15, right: 10),
+                          //   child: Image.asset(
+                          //     'assets/images/onBoardingBtn.png',
+                          //   ),
+                          // ),
                         ),
-                      ),
-                    ),
                   ),
                 ],
               ),
