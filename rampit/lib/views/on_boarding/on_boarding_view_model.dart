@@ -34,14 +34,14 @@ class OnBoardingViewModel extends BaseViewModel {
       'title': 'Fast\n',
       'text': 'Delivery\n',
       'subtitle':
-          'Save time and stay safe at home. Delivered to you – no need to travel between home and Bazaar.',
+          'Save time and stay safe at home \n- Delivered to you – we deliver your \ngoods in 15 Mins.',
       'image': 'assets/images/wayConcept.png'
     },
     {
       'title': 'Easy\n',
       'text': 'Payment\n',
       'subtitle':
-          'Manage your household expenses and save money. Easily track all your purchases and enjoy the savings!',
+          'Manage your household expenses and \nsave money - Easily track all your purchases and \nenjoy the savings!',
       'image': 'assets/images/creditCard.png'
     },
   ];

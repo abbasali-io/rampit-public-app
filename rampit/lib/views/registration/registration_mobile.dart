@@ -18,7 +18,7 @@ class _RegistrationMobile extends StatelessWidget {
                   height: size.height * 0.100,
                 ),
                 Text(
-                    'Welcome to Ebazaar',
+                    'Welcome to Rampit',
                     style: GoogleFonts.nunito(
                       fontSize: size.height * 0.032,
                       fontWeight: FontWeight.w800,
