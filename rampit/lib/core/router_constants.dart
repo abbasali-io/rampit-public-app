@@ -11,3 +11,4 @@ const String confirmOrderPlaceViewRoute = 'confirmOrderPlaceViewRoute';
 const String checkOutViewRoute = 'checkOutViewRoute';
 const String orderPlacedViewRoute = 'orderPlacedViewRoute';
 const String searchViewRoute = 'searchViewRoute';
+const String onBoardingViewRoute = 'onBoardingViewRoute';

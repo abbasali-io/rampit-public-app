@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
       materialApp: MaterialApp(
         navigatorKey: locator<NavigationService>().navigatorKey,
         onGenerateRoute: router.Router.generateRoute,
-        initialRoute: homeViewRoute,
+        initialRoute: onBoardingViewRoute,
       )
     );
   }
