@@ -16,6 +16,11 @@ class HomeViewModel extends BaseViewModel {
           nav.navigateTo(homeViewRoute);
           break;
         }
+        case 1:
+        {
+          nav.navigateTo(myOrderViewRoute);
+          break;
+        }
       case 2:
         {
           nav.navigateTo(searchViewRoute);

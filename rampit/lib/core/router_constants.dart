@@ -13,3 +13,4 @@ const String orderPlacedViewRoute = 'orderPlacedViewRoute';
 const String searchViewRoute = 'searchViewRoute';
 const String onBoardingViewRoute = 'onBoardingViewRoute';
 const String registrationViewRoute = 'registrationViewRoute';
+const String myOrderViewRoute = 'myOrderViewRoute';
