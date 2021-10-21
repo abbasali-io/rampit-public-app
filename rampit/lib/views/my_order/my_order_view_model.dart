@@ -6,7 +6,7 @@ import 'package:stacked_services/stacked_services.dart';
 
 class MyOrderViewModel extends BaseViewModel {
   //imports
-  NavigationService _nav = locator<NavigationService>();
+  NavigationService nav = locator<NavigationService>();
 
   //properties
   final controller = PageController();
@@ -49,27 +49,27 @@ class MyOrderViewModel extends BaseViewModel {
     switch (pageIndex) {
       case 0:
         {
-          _nav.navigateTo(homeViewRoute);
+          nav.navigateTo(homeViewRoute);
           break;
         }
         case 1:
         {
-          _nav.navigateTo(myOrderViewRoute);
+          nav.navigateTo(myOrderViewRoute);
           break;
         }
       case 2:
         {
-          _nav.navigateTo(searchViewRoute);
+          nav.navigateTo(searchViewRoute);
           break;
         }
       case 5:
         {
-          _nav.navigateTo(myCartViewRoute);
+          nav.navigateTo(myCartViewRoute);
           break;
         }
       default:
         {
-          _nav.navigateTo(homeViewRoute);
+          nav.navigateTo(homeViewRoute);
         }
     }
   }

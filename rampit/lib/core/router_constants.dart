@@ -14,3 +14,4 @@ const String searchViewRoute = 'searchViewRoute';
 const String onBoardingViewRoute = 'onBoardingViewRoute';
 const String registrationViewRoute = 'registrationViewRoute';
 const String myOrderViewRoute = 'myOrderViewRoute';
+const String orderDetailsViewRoute = 'orderDetailsViewRoute';

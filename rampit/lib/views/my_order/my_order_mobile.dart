@@ -11,67 +11,68 @@ class _MyOrderMobile extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         floatingActionButtonLocation:
-          FloatingActionButtonLocation.miniCenterDocked,
-      floatingActionButton: FloatingActionButton(
-        elevation: 10,
-        backgroundColor: MyStyles.themeData().backgroundColor,
-        child: const FaIcon(FontAwesomeIcons.shoppingCart, color: Colors.black),
-        onPressed: () {
-          this.viewModel.navigateToPage(pageIndex: 5);
-        },
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: 0,
-        unselectedItemColor: MyStyles.themeData().highlightColor,
-        selectedItemColor: MyStyles.themeData().primaryColor,
-        showSelectedLabels: false,
-        showUnselectedLabels: false,
-        type: BottomNavigationBarType.fixed,
-        elevation: 40,
-        onTap: (index) {
-          this.viewModel.navigateToPage(pageIndex: index);
-        },
-        items: [
-          BottomNavigationBarItem(
-              icon: FaIcon(FontAwesomeIcons.home), label: 'Home'),
-          BottomNavigationBarItem(
-              icon: FaIcon(FontAwesomeIcons.shoppingBag), label: 'Category'),
-          BottomNavigationBarItem(
-              icon: FaIcon(FontAwesomeIcons.search), label: 'Search'),
-          BottomNavigationBarItem(
-              icon: FaIcon(FontAwesomeIcons.userAlt), label: 'User'),
-        ],
-        backgroundColor: MyStyles.themeData().backgroundColor,
-        // shape: CircularNotchedRectangle(),
-        // notchMargin: 10.0,
-        // child: new Row(
-        //   mainAxisSize: MainAxisSize.max,
-        //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        //   children: <Widget>[
-        //     IconButton(
-        //       icon: FaIcon(FontAwesomeIcons.home),
-        //       onPressed: () {
-        //         this.viewModel.navigateToPage(pageName: 'Home');
-        //       },
-        //     ),
-        //     IconButton(
-        //       icon: FaIcon(FontAwesomeIcons.shoppingBag),
-        //       onPressed: () {},
-        //     ),
-        //     SizedBox(
-        //       width: 10.w,
-        //     ),
-        //     IconButton(
-        //       icon: FaIcon(FontAwesomeIcons.search),
-        //       onPressed: () {},
-        //     ),
-        //     IconButton(
-        //       icon: FaIcon(FontAwesomeIcons.userAlt),
-        //       onPressed: () {},
-        //     ),
-        //   ],
-        // ),
-      ),
+            FloatingActionButtonLocation.miniCenterDocked,
+        floatingActionButton: FloatingActionButton(
+          elevation: 10,
+          backgroundColor: MyStyles.themeData().backgroundColor,
+          child:
+              const FaIcon(FontAwesomeIcons.shoppingCart, color: Colors.black),
+          onPressed: () {
+            this.viewModel.navigateToPage(pageIndex: 5);
+          },
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+          currentIndex: 0,
+          unselectedItemColor: MyStyles.themeData().highlightColor,
+          selectedItemColor: MyStyles.themeData().primaryColor,
+          showSelectedLabels: false,
+          showUnselectedLabels: false,
+          type: BottomNavigationBarType.fixed,
+          elevation: 40,
+          onTap: (index) {
+            this.viewModel.navigateToPage(pageIndex: index);
+          },
+          items: [
+            BottomNavigationBarItem(
+                icon: FaIcon(FontAwesomeIcons.home), label: 'Home'),
+            BottomNavigationBarItem(
+                icon: FaIcon(FontAwesomeIcons.shoppingBag), label: 'Category'),
+            BottomNavigationBarItem(
+                icon: FaIcon(FontAwesomeIcons.search), label: 'Search'),
+            BottomNavigationBarItem(
+                icon: FaIcon(FontAwesomeIcons.userAlt), label: 'User'),
+          ],
+          backgroundColor: MyStyles.themeData().backgroundColor,
+          // shape: CircularNotchedRectangle(),
+          // notchMargin: 10.0,
+          // child: new Row(
+          //   mainAxisSize: MainAxisSize.max,
+          //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          //   children: <Widget>[
+          //     IconButton(
+          //       icon: FaIcon(FontAwesomeIcons.home),
+          //       onPressed: () {
+          //         this.viewModel.navigateToPage(pageName: 'Home');
+          //       },
+          //     ),
+          //     IconButton(
+          //       icon: FaIcon(FontAwesomeIcons.shoppingBag),
+          //       onPressed: () {},
+          //     ),
+          //     SizedBox(
+          //       width: 10.w,
+          //     ),
+          //     IconButton(
+          //       icon: FaIcon(FontAwesomeIcons.search),
+          //       onPressed: () {},
+          //     ),
+          //     IconButton(
+          //       icon: FaIcon(FontAwesomeIcons.userAlt),
+          //       onPressed: () {},
+          //     ),
+          //   ],
+          // ),
+        ),
         backgroundColor: MyStyles.themeData().backgroundColor,
         appBar: PreferredSize(
           preferredSize: Size.fromHeight(55),
@@ -131,8 +132,13 @@ class _MyOrderMobile extends StatelessWidget {
                         final orderConfirmedDate = '2 Oct';
                         final orderConfirmedTime = '11:35 a.m';
                         return OrderContainerWidget(
-                          categoryImage: this.viewModel.categoryImage,
-                          orderDetailsFunc: (){},
+                            categoryImage: this.viewModel.categoryImage,
+                            orderDetailsFunc: () {
+                              this
+                                  .viewModel
+                                  .nav
+                                  .navigateTo(orderDetailsViewRoute);
+                            },
                             size: size,
                             context: context,
                             docId: docId,
@@ -179,8 +185,8 @@ class _MyOrderMobile extends StatelessWidget {
             ),
             Container(
               margin: const EdgeInsets.only(bottom: 30),
-                  height: size.height / 3.7,
-                  color: Colors.transparent,
+              height: size.height / 3.7,
+              color: Colors.transparent,
               child: ListView.builder(
                 itemCount: 5,
                 itemBuilder: (BuildContext context, int index) {
@@ -192,7 +198,7 @@ class _MyOrderMobile extends StatelessWidget {
                   final deliveryDate = '2 Oct';
                   final deliveryTime = '11:35 a.m';
                   return pastOrderContainer(
-                    categoryImage: this.viewModel.categoryImage,
+                      categoryImage: this.viewModel.categoryImage,
                       size: size,
                       context: context,
                       docId: docId,
@@ -381,6 +387,7 @@ class _MyOrderMobile extends StatelessWidget {
       ),
     );
   }
+
   AnimatedContainer _buildDots({int index, @required Size size}) {
     return AnimatedContainer(
       duration: const Duration(milliseconds: 200),
