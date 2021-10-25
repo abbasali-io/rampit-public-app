@@ -9,7 +9,7 @@ class HomeViewModel extends BaseViewModel {
 
   HomeViewModel() {}
 
-  navigateToPage({@required int pageIndex}) {
+ navigateToPage({@required int pageIndex}) {
     switch (pageIndex) {
       case 0:
         {
@@ -24,6 +24,11 @@ class HomeViewModel extends BaseViewModel {
       case 2:
         {
           nav.navigateTo(searchViewRoute);
+          break;
+        }
+      case 3:
+        {
+          nav.navigateTo(accountViewRoute);
           break;
         }
       case 5:

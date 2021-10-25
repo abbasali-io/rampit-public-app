@@ -57,6 +57,11 @@ class MyOrderViewModel extends BaseViewModel {
           nav.navigateTo(searchViewRoute);
           break;
         }
+      case 3:
+        {
+          nav.navigateTo(accountViewRoute);
+          break;
+        }
       case 5:
         {
           nav.navigateTo(myCartViewRoute);
@@ -65,7 +70,6 @@ class MyOrderViewModel extends BaseViewModel {
       default:
         {
           nav.navigateTo(homeViewRoute);
-          break;
         }
     }
   }

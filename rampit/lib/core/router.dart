@@ -20,6 +20,7 @@ import 'package:rampit/views/my_order/my_order_view.dart' as view13;
 import 'package:rampit/views/order_details/order_details_view.dart' as view14;
 import 'package:rampit/views/track_order/track_order_view.dart' as view15;
 import 'package:rampit/views/rating/rating_view.dart' as view16;
+import 'package:rampit/views/account/account_view.dart' as view17;
 
 class Router {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -58,6 +59,8 @@ class Router {
         return MaterialPageRoute(builder: (_) => view15.TrackOrderView());
       case ratingViewRoute:
         return MaterialPageRoute(builder: (_) => view16.RatingView());
+      case accountViewRoute:
+        return MaterialPageRoute(builder: (_) => view17.AccountView());
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(

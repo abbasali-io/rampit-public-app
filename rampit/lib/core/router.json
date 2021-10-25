@@ -1,5 +1,5 @@
 {
-    "last_updated": "Sun, 24 Oct 2021 16:08:44 GMT",
+    "last_updated": "Mon, 25 Oct 2021 01:38:55 GMT",
     "routes": [
         {
             "file_path": "views/address/address_view.dart",
@@ -85,6 +85,11 @@
             "file_path": "views/rating/rating_view.dart",
             "route_name": "ratingViewRoute",
             "view_name": "RatingView"
+        },
+        {
+            "file_path": "views/account/account_view.dart",
+            "route_name": "accountViewRoute",
+            "view_name": "AccountView"
         }
     ]
 }
