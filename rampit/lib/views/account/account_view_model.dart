@@ -67,7 +67,7 @@ class AccountViewModel extends BaseViewModel {
   }
 
   void goToSupport() {
-    //this.nav.navigateTo('support');
+    this.nav.navigateTo(supportViewRoute);
   }
 
   void goToSetting() {

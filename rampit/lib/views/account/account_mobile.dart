@@ -143,7 +143,7 @@ class _AccountMobile extends StatelessWidget {
             optionTitle: 'Notifications',
             icon: Icons.notifications_outlined,
             onTap: () {
-              //viewModel.goToSupport();
+              viewModel.goToSupport();
             },
           ),
           SizedBox(
@@ -162,7 +162,7 @@ class _AccountMobile extends StatelessWidget {
             optionTitle: 'About',
             icon: Icons.info_outline,
             onTap: () {
-              viewModel.goToSupport();
+              //viewModel.goToSupport();
             },
           ),
           SizedBox(

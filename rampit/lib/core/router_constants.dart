@@ -18,3 +18,5 @@ const String orderDetailsViewRoute = 'orderDetailsViewRoute';
 const String trackOrderViewRoute = 'trackOrderViewRoute';
 const String ratingViewRoute = 'ratingViewRoute';
 const String accountViewRoute = 'accountViewRoute';
+const String supportViewRoute = 'supportViewRoute';
+const String faqViewRoute = 'faqViewRoute';
