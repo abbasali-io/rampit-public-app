@@ -1,4 +1,5 @@
 import 'package:rampit/core/locator.dart';
+import 'package:rampit/core/router_constants.dart';
 import 'package:stacked/stacked.dart';
 import 'package:stacked_services/stacked_services.dart';
 
@@ -134,7 +135,7 @@ class OrderDetailsViewModel extends BaseViewModel {
   }
 
   void goToTimeline() {
-    //_nav!.navigateToName('timeline');
+    _nav.navigateTo(trackOrderViewRoute);
   }
 
   // Add ViewModel specific code here

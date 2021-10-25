@@ -15,3 +15,5 @@ const String onBoardingViewRoute = 'onBoardingViewRoute';
 const String registrationViewRoute = 'registrationViewRoute';
 const String myOrderViewRoute = 'myOrderViewRoute';
 const String orderDetailsViewRoute = 'orderDetailsViewRoute';
+const String trackOrderViewRoute = 'trackOrderViewRoute';
+const String ratingViewRoute = 'ratingViewRoute';

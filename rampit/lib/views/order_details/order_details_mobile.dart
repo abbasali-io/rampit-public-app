@@ -293,8 +293,8 @@ class _OrderDetailsMobile extends StatelessWidget {
 
   Widget shippingAddressInfo({@required Size size}) {
     return Container(
+      padding: EdgeInsets.only(bottom: 10),
       width: size.width * 0.343,
-      height: size.height / 1.5,
       margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
       // padding: const EdgeInsets.symmetric(horizontal: 5),
       alignment: Alignment.center,
@@ -321,7 +321,7 @@ class _OrderDetailsMobile extends StatelessWidget {
       height: size.height * 0.005,
             ),
             Divider(
-      color: MyStyles.themeData().primaryColor,
+      color: MyStyles.themeData().primaryColorLight,
       thickness: 2,
             ),
             Padding(
@@ -339,63 +339,6 @@ class _OrderDetailsMobile extends StatelessWidget {
       padding: const EdgeInsets.all(10.0),
       child: Text(
         viewModel.userName,
-        style: GoogleFonts.poppins(
-          color: MyStyles.themeData().highlightColor,
-          fontSize: size.height * 0.022,
-          fontWeight: FontWeight.w500,
-        ),
-      ),
-            ),
-            SizedBox(
-      height: size.height * 0.00,
-            ),
-            Padding(
-      padding: const EdgeInsets.only(left: 10.0),
-      child: Text(
-          viewModel.userAddress,
-          textAlign: TextAlign.start,
-          maxLines: 2,
-          overflow: TextOverflow.ellipsis,
-          style: GoogleFonts.poppins(
-            color: MyStyles.themeData().primaryColorLight,
-            fontSize: size.height * 0.020,
-            fontWeight: FontWeight.w500,
-          ),
-        ),
-            ),
-            Padding(
-      padding: const EdgeInsets.only(left: 10.0),
-      child: Text(
-          viewModel.userPhoneNumber,
-          textAlign: TextAlign.center,
-          maxLines: 1,
-          overflow: TextOverflow.ellipsis,
-          style: GoogleFonts.poppins(
-            color: MyStyles.themeData().primaryColorLight,
-            fontSize: size.height * 0.020,
-            fontWeight: FontWeight.w500,
-          ),
-        ),
-            ),
-            Divider(
-      color: MyStyles.themeData().primaryColor,
-      thickness: 2,
-            ),
-            Padding(
-      padding: const EdgeInsets.all(10.0),
-      child: Text(
-        'Pick Up Address:',
-        style: GoogleFonts.poppins(
-          color: MyStyles.themeData().highlightColor,
-          fontSize: size.height * 0.022,
-          fontWeight: FontWeight.w500,
-        ),
-      ),
-            ),
-            Padding(
-      padding: const EdgeInsets.all(10.0),
-      child: Text(
-        'Ebazaar Union Market',
         style: GoogleFonts.poppins(
           color: MyStyles.themeData().highlightColor,
           fontSize: size.height * 0.022,

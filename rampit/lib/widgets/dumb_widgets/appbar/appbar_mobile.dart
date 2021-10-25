@@ -5,7 +5,7 @@ class _AppbarMobile extends StatelessWidget {
   final bool action;
   final String title;
   //imports
-  final NavigationService _nav = locator<NavigationService>();
+  //final NavigationService _nav = locator<NavigationService>();
 
   _AppbarMobile({
     @required this.leading,

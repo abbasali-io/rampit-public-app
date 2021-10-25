@@ -26,16 +26,11 @@ class MyOrderViewModel extends BaseViewModel {
 
   MyOrderViewModel() {
     this.categoryImage = 'assets/images/categoryImage.png';
-    
   }
 
-  void goToOrderDetail(String docId) {
-    
-  }
+  void goToOrderDetail(String docId) {}
 
-  void goToRating(String docId) {
-    
-  }
+  void goToRating(String docId) {}
 
   Future<String> getData() async {
     try {
@@ -70,6 +65,7 @@ class MyOrderViewModel extends BaseViewModel {
       default:
         {
           nav.navigateTo(homeViewRoute);
+          break;
         }
     }
   }

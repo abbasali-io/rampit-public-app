@@ -22,7 +22,7 @@ class _MyOrderMobile extends StatelessWidget {
           },
         ),
         bottomNavigationBar: BottomNavigationBar(
-          currentIndex: 0,
+          currentIndex: 1,
           unselectedItemColor: MyStyles.themeData().highlightColor,
           selectedItemColor: MyStyles.themeData().primaryColor,
           showSelectedLabels: false,
@@ -85,12 +85,9 @@ class _MyOrderMobile extends StatelessWidget {
         body: ListView(
           padding: const EdgeInsets.symmetric(vertical: 10),
           children: [
-            SizedBox(
-              height: size.height * 0.0,
-            ),
             Container(
               width: double.infinity,
-              height: size.height * 0.065,
+              height: size.height * 0.055,
               color: Color(0xffEFF2EB),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -168,7 +165,7 @@ class _MyOrderMobile extends StatelessWidget {
             ),
             Container(
               width: double.infinity,
-              height: size.height * 0.065,
+              height: size.height * 0.055,
               color: Color(0xffEFF2EB),
               child: Center(
                 child: Text(
@@ -198,6 +195,9 @@ class _MyOrderMobile extends StatelessWidget {
                   final deliveryDate = '2 Oct';
                   final deliveryTime = '11:35 a.m';
                   return pastOrderContainer(
+                      onTab: () {
+                        this.viewModel.nav.navigateTo(ratingViewRoute);
+                      },
                       categoryImage: this.viewModel.categoryImage,
                       size: size,
                       context: context,
@@ -230,6 +230,7 @@ class _MyOrderMobile extends StatelessWidget {
       BuildContext context,
       @required String docId,
       String orderNo,
+      @required Function onTab,
       String totalPrice,
       String deliveryDate,
       String deliveryTime,
@@ -368,9 +369,7 @@ class _MyOrderMobile extends StatelessWidget {
               ),
               Spacer(),
               GestureDetector(
-                onTap: () {
-                  viewModel.goToRating(docId);
-                },
+                onTap: onTab,
                 child: Text(
                   'Rate Now',
                   overflow: TextOverflow.ellipsis,
