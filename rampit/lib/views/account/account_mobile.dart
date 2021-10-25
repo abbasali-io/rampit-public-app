@@ -117,7 +117,7 @@ class _AccountMobile extends StatelessWidget {
             size: size,
             context: context,
             optionTitle: 'Support',
-            icon: Icons.support_outlined,
+            icon: FontAwesomeIcons.questionCircle,
             onTap: () {
               viewModel.goToSupport();
             },
@@ -141,7 +141,7 @@ class _AccountMobile extends StatelessWidget {
             size: size,
             context: context,
             optionTitle: 'Notifications',
-            icon: Icons.notifications,
+            icon: Icons.notifications_outlined,
             onTap: () {
               //viewModel.goToSupport();
             },
@@ -160,7 +160,7 @@ class _AccountMobile extends StatelessWidget {
             size: size,
             context: context,
             optionTitle: 'About',
-            icon: Icons.support_outlined,
+            icon: Icons.info_outline,
             onTap: () {
               viewModel.goToSupport();
             },
@@ -176,7 +176,7 @@ class _AccountMobile extends StatelessWidget {
             size: size,
             context: context,
             optionTitle: 'Change Addresses',
-            icon: Icons.article_outlined,
+            icon: Icons.location_on_outlined,
             onTap: () {
               viewModel.goToAddress();
             },
@@ -294,7 +294,7 @@ class _AccountMobile extends StatelessWidget {
                     primary: Colors.transparent,
                   ),
                   onPressed: () {
-                    // _nav.navigateSetToPhoneLogin();
+                    this.viewModel.nav.navigateTo(accountViewRoute);
                   },
                   child: Center(
                     child: Text(
@@ -313,7 +313,7 @@ class _AccountMobile extends StatelessWidget {
                     primary: Colors.transparent,
                   ),
                   onPressed: () {
-                    //_nav!.pop();
+                    this.viewModel.nav.navigateTo(accountViewRoute);
                   },
                   child: Center(
                     child: Text(
