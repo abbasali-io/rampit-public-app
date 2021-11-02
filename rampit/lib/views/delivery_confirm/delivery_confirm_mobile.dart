@@ -83,7 +83,7 @@ class _DeliveryConfirmMobile extends StatelessWidget {
               itemCount: this.viewModel.radioBtnValues.length,
               itemBuilder: (BuildContext context, int index) {
                 var mints =
-                    int.parse(this.viewModel.radioBtnValues[index]) + 10;
+                    int.parse(this.viewModel.radioBtnValues[index]);
                 return ListTile(
                   subtitle: Text(
                     'Max ' + mints.toString() + ' Items per order',
