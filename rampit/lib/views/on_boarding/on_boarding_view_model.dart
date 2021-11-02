@@ -20,28 +20,27 @@ class OnBoardingViewModel extends BaseViewModel {
     _currentPage = value;
     notifyListeners();
   }
-
   // Add ViewModel specific code here
   final List<Map<String, String>> splashData = [
     {
-      'title': 'Quality\n',
-      'text': 'Product\n',
-      'subtitle': '',
-      //'Enjoy the freshest produce at Bazaar price. Cheap and good – nothing beats that.',
-      'image': 'assets/images/OnlineGrocery.png'
-    },
-    {
-      'title': 'Fast\n',
-      'text': 'Delivery\n',
-      'subtitle':
-          'Save time and stay safe at home \n- Delivered to you – we deliver your \ngoods in 15 Mins.',
+      'title': '5 Mins\n',
+      'text': 'Delivery',
+      'subtitle': 'Actually, choose between Super fast\ndelivery (5 minutes) and Super Faster\ndelivery (15 minutes)!!\n',
       'image': 'assets/images/wayConcept.png'
     },
     {
-      'title': 'Easy\n',
-      'text': 'Payment\n',
+      'title': 'Empower your\n',
+      'text': 'community',
       'subtitle':
-          'Manage your household expenses and \nsave money - Easily track all your purchases and \nenjoy the savings!',
+          'Speed = we have to be close to you.\nDeliverer will likely come from your\ncommunity!\n',
+      'image': 'assets/images/OnlineGrocery.png'
+    },
+     
+    {
+      'title': '',
+      'text': 'Reliability',
+      'subtitle':
+          'why stock up things if you can get it\ndelivered when you need them?\n',
       'image': 'assets/images/creditCard.png'
     },
   ];

@@ -272,12 +272,10 @@ class _AddressMobile extends StatelessWidget {
                       child: Container(
                         height: 30.h,
                         width: 87.w,
-                        child: Center(
-                          child: Image.asset(
+                        child: Image.asset(
                             'assets/images/map.jpg',
                             fit: BoxFit.fill,
                           ),
-                        ),
                         decoration: BoxDecoration(
                             border: Border.all(
                                 style: BorderStyle.solid,

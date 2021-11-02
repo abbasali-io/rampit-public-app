@@ -11,22 +11,30 @@ void main() async {
   runApp(MyApp());
 }
 
+// void configLoading() {
+//   EasyLoading.instance
+//     ..indicatorWidget = Text('data')
+//     ..displayDuration = Duration(milliseconds: 9000)
+//     ..loadingStyle = EasyLoadingStyle.custom
+//     ..indicatorType = EasyLoadingIndicatorType.chasingDots
+//     ..indicatorSize = 45.0
+//     ..indicatorColor = Colors.blue
+//     ..progressColor = Colors.blue
+//     ..backgroundColor = Colors.yellow.withOpacity(0.25)
+//     ..textColor = Colors.black
+//     ..maskType = EasyLoadingMaskType.custom
+//     ..maskColor = Colors.yellow.withOpacity(0.25)
+//     ..dismissOnTap = false;
+// }
+
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return LiquidApp(
-      // liquidTheme: LiquidThemeData(
-      //   colors: LiquidColors(
-      //     white: Color.fromRGBO(229,229,229,1),
-      //     primary: Color.fromRGBO(255, 1, 1, 1),
-      //     secondary: Color.fromRGBO(235, 235, 235, 1),
-      //     info: Color.fromRGBO(0, 0, 0, 1)
-      //   ),
-      // ),
       materialApp: MaterialApp(
         navigatorKey: locator<NavigationService>().navigatorKey,
         onGenerateRoute: router.Router.generateRoute,
-        initialRoute: homeViewRoute,
+        initialRoute: onBoardingViewRoute,
       )
     );
   }

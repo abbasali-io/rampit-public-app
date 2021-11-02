@@ -29,7 +29,7 @@ class _RegistrationMobile extends StatelessWidget {
                   height: size.height * 0.070,
                 ),
                 Image.asset(
-                  'assets/images/bike.png',
+                  'assets/images/rampitBike.png',
                   fit: BoxFit.contain,
                 ),
                 // SizedBox(

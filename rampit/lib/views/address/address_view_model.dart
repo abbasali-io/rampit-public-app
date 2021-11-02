@@ -62,19 +62,26 @@ class AddressViewModel extends BaseViewModel {
     this.officeButton = MyStyles.themeData().primaryColorLight;
     this.selectedAddress = '';
     this.states = [
-      'Punjab',
-      'Sindh',
-      'Serhad',
-      'Bolochistan',
+      'Kuala Lumpur',
+      'Selangor',
     ];
-    this.selectedState = 'Punjab';
+    this.selectedState = 'Kuala Lumpur';
     this.areas = [
-      'Lahore',
-      'Multan',
-      'Kasur',
-      'Haronabad',
+      'Ampang',
+      'Batu Caves',
+      'Cheras',
+      'Damansara',
+      'Gombak',
+      'Hulu Kelang',
+      'Kepong',
+      'Kuala Lumpur',
+      'Petaling',
+      'Petaling Jaya',
+      'Sentul',
+      'Setapak',
+      'Sungai Besi',
     ];
-    this.selectedArea = 'Lahore';
+    this.selectedArea = 'Ampang';
   }
 
   void goToConfirmDeliveryPage() {
@@ -82,21 +89,43 @@ class AddressViewModel extends BaseViewModel {
   }
 
   selectState({String value}) {
-    if (value == 'Punjab') {
+    if (value == 'Kuala Lumpur') {
       this.selectedState = value;
-      this.selectedArea = 'Lahore';
+      this.selectedArea = 'Ampang';
       this.areas = [
-        'Lahore',
-        'Multan',
-        'Kasur',
-        'Haronabad',
+        'Ampang',
+        'Batu Caves',
+        'Cheras',
+        'Damansara',
+        'Gombak',
+        'Hulu Kelang',
+        'Kepong',
+        'Kuala Lumpur',
+        'Petaling',
+        'Petaling Jaya',
+        'Sentul',
+        'Setapak',
+        'Sungai Besi',
       ];
     } else {
       this.selectedState = value;
-      this.selectedArea = 'Karachi';
+      this.selectedArea = 'Ampang';
       this.areas = [
-        'Karachi',
-        'Hydrabad',
+        'Ampang',
+        'Bandar Baru Bangi',
+        'Bandar Puncak Alam',
+        'Banting',
+        'Batang Kali',
+        'Batu Arang',
+        'Batu Caves',
+        'Beranang',
+        'Bestari Jaya',
+        'Bukit Rotan',
+        'Cheras'
+        'Cyberjaya',
+        'Dengkil',
+        'Hulu Langat',
+        'Jenjarom',
       ];
     }
   }

@@ -101,7 +101,7 @@ class _FaqMobile extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 10),
             alignment: Alignment.center,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(25),
+              borderRadius: BorderRadius.circular(15),
               boxShadow: [
                 BoxShadow(
                   color: Color(0x33303841),
@@ -135,7 +135,7 @@ class _FaqMobile extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 15),
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(25),
+                    borderRadius: BorderRadius.circular(15),
                     boxShadow: [
                       BoxShadow(
                         color: Color(0x33303841),
