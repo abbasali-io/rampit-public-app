@@ -1,41 +1,48 @@
 import 'package:flutter/material.dart';
-import 'package:liquid_ui/liquid_ui.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:rampit/app/app.locator.dart';
+import 'package:rampit/app/app.router.dart';
 import 'package:stacked_services/stacked_services.dart';
 
-import 'core/locator.dart';
-import 'core/router_constants.dart';
-import 'core/router.dart' as router;
-
-void main() async {
-  await LocatorInjector.setUpLocator();
-  runApp(MyApp());
+Future main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  //await Firebase.initializeApp();
+  setupLocator();
+  _configLoading();
+  runApp(const MyApp());
 }
 
-// void configLoading() {
-//   EasyLoading.instance
-//     ..indicatorWidget = Text('data')
-//     ..displayDuration = Duration(milliseconds: 9000)
-//     ..loadingStyle = EasyLoadingStyle.custom
-//     ..indicatorType = EasyLoadingIndicatorType.chasingDots
-//     ..indicatorSize = 45.0
-//     ..indicatorColor = Colors.blue
-//     ..progressColor = Colors.blue
-//     ..backgroundColor = Colors.yellow.withOpacity(0.25)
-//     ..textColor = Colors.black
-//     ..maskType = EasyLoadingMaskType.custom
-//     ..maskColor = Colors.yellow.withOpacity(0.25)
-//     ..dismissOnTap = false;
-// }
+void _configLoading() {
+  EasyLoading.instance
+    ..displayDuration = const Duration(milliseconds: 2000)
+    ..indicatorType = EasyLoadingIndicatorType.fadingCircle
+    ..loadingStyle = EasyLoadingStyle.dark
+    ..indicatorSize = 45.0
+    ..radius = 10.0
+    ..progressColor = Colors.yellow
+    ..backgroundColor = Colors.green
+    ..indicatorColor = Colors.yellow
+    ..textColor = Colors.yellow
+    ..maskColor = Colors.blue.withOpacity(0.5)
+    ..userInteractions = true
+    ..dismissOnTap = false;
+}
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return LiquidApp(
-      materialApp: MaterialApp(
-        navigatorKey: locator<NavigationService>().navigatorKey,
-        onGenerateRoute: router.Router.generateRoute,
-        initialRoute: onBoardingViewRoute,
-      )
+    return ScreenUtilInit(
+      designSize: const Size(100, 100),
+      builder: () => MaterialApp(
+        title: 'Rampit',
+        navigatorKey: StackedService.navigatorKey,
+        onGenerateRoute: StackedRouter().onGenerateRoute,
+        builder: EasyLoading.init(),
+      ),
     );
   }
 }
